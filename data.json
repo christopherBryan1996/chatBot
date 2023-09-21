@@ -1,0 +1,45 @@
+{
+    "data": [
+        {
+            "type": "saludo",
+            "texto": [
+                "Hola",
+                "Hola, me ayudas",
+                "Ey"
+            ],
+            "response":[
+                "Hola humano, ¿En qué puedo ayudarte?",
+                "Hola humano, ¿En qué te ayudo?"
+            ]
+        },
+        {
+            "type": "pedir_ayuda",
+            "texto": [
+                "oye",
+                "me ayudas",
+                "necesito ayuda",
+                "me puedes ayudar"
+            ],
+            "response":[
+                "¿En qué puedo ayudarte?",
+                "¿En qué te ayudo?",
+                "¿Dime lo q necesitas?"
+            ]
+        },{
+            "type": "despedida",
+            "texto": [
+                "Adios",
+                "Bye",
+                "cuidate",
+                "hasta luego",
+                "ya no te necesito"
+            ],
+            "response":[
+                "Adios humanos",
+                "Good bye, adios en ingles",
+                "Cualquier cosa me puedes volver hablar",
+                "Cuidate, adios"
+            ]
+        }
+    ]
+}

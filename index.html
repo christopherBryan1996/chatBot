@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot</title>
+  <style>
+    #chatbox {
+      width: 300px;
+      height: 400px;
+      overflow: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="chatbox"></div>
+  <input type="text" id="userInput" placeholder="Escribe tu mensaje..." />
+  <button onclick="sendMessage()">Enviar</button>
+
+  <script>
+    var chatbox = document.getElementById("chatbox");
+    var userInput = document.getElementById("userInput");
+
+    function sendMessage() {
+      var userMessage = userInput.value;
+      displayMessage("Tú: " + userMessage);
+      // Lógica del chatbot
+      var botResponse = getBotResponse(userMessage);
+      displayMessage("Bot: " + botResponse);
+      userInput.value = "";
+    }
+
+    function displayMessage(message) {
+      var messageElement = document.createElement("p");
+      messageElement.textContent = message;
+      chatbox.appendChild(messageElement);
+    }
+
+    function getBotResponse(userMessage) {
+      // Lógica para generar la respuesta del chatbot
+      // Puedes implementar tus propias reglas o utilizar bibliotecas o servicios de procesamiento del lenguaje natural
+      // Aquí hay un ejemplo simple:
+      if (userMessage.includes("Hola")) {
+        return "¡Hola! ¿En qué puedo ayudarte?";
+      } else if (userMessage.includes("Adiós")) {
+        return "Hasta luego. ¡Que tengas un buen día!";
+      } else {
+        return "Lo siento, no entiendo. ¿Podrías ser más claro?";
+      }
+    }
+  </script>
+</body>
+</html>

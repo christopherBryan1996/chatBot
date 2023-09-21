@@ -1,0 +1,57 @@
+{
+    "intents": [
+        {
+            "intent": "Greeting", 
+            "text": [
+                "Hi",
+                "Hi there",
+                "Hola",
+                "Hello there",
+                "Hey"
+            ],
+            "responses":[
+                "hi human, please tell me your geniSys user",
+                "Hello hu, please tell me your Greeting user"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses":[]
+            },
+            "context": {
+                "in": "",
+                "out":"GreetingUserRequest",
+                "clear": false
+            },
+            "entityType":"NA",
+            "entities":[]
+        },
+        {
+            "intent": "GreetingResponse", 
+            "text": [
+                "My user is Bryan",
+                "This bryan",
+                "I am Bryan"
+            ],
+            "responses":[
+                "Great! Hi <HUMAN>, how cant I help?",
+                "Cool Hi <HUMAN>"
+            ],
+            "extension": {
+                "function": "extensions.gHumans.UpdateHuman",
+                "entities": true,
+                "responses":[
+                    "Hi %%HUMAN%%! how cant I help?",
+                    "Ok HI %%HUMAN%%"
+                ]
+            },
+            "context": {
+                "in": "",
+                "out":"GreetingUserRequest",
+                "clear": true
+            },
+            "entityType":"NA",
+            "entities":[]
+        }
+    ]
+}
